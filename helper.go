@@ -7,12 +7,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/henrylee2cn/goutil"
-	"github.com/henrylee2cn/goutil/errors"
+	"github.com/andeya/goutil"
+	"github.com/andeya/goutil/errors"
 )
 
 // SyncINI quickly create your own configuration files.
-// Struct tags reference `https://github.com/henrylee2cn/ini`
+// Struct tags reference `https://github.com/andeya/ini`
 func SyncINI(structPtr interface{}, f func(onecUpdateFunc func() error) error, filename ...string) error {
 	t := reflect.TypeOf(structPtr)
 	if t.Kind() != reflect.Ptr {
